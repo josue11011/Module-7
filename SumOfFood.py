@@ -4,7 +4,13 @@
 # Purpose of a Program: sums the price of each food item in a dictionary
 import math
 
-def SumOfFood():
+def SumOfFood(d): #pass the dictionary
+    #foodDict = (3.50,5.30,9.45,5.75)
+    #print(sum(foodDict))
+    return sum(d.values())   #values function return a list of prices
+
+def main():
     foodDict = (3.50,5.30,9.45,5.75)
-    print(sum(foodDict))
-SumOfFood()
+    print("Total amount is ${}".format(SumOfFood(foodDict))
+          
+main()
