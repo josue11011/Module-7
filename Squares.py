@@ -8,19 +8,21 @@ def drawSquare(t,sz):
         t.forward(sz)
         t.left(90)
 
-wn = turtle.Screen()
-
-alex = turtle.Turtle()
-alex.color("blue")
-
-t = alex
-sz = 20
-for i in range(5):
-   alex.pensize(3)
-   drawSquare(t,sz)
-   sz = sz + 20
-   alex.penup()
-   alex.goto(alex.pos() + (-10, -10))
-   alex.pendown()
-wn.mainloop()
-wn.exitonclick()
+#Use modular design
+def main():
+    wn = turtle.Screen()
+    alex = turtle.Turtle()
+    alex.color("blue")
+    #t = alex
+    sz = 20
+    for i in range(5):
+        alex.pensize(3)
+        drawSquare(alex,sz)
+        sz = sz + 20
+        alex.penup()
+        alex.goto(alex.pos() + (-10, -10))
+        alex.pendown()
+    
+    wn.mainloop()
+    wn.exitonclick()
+main()
