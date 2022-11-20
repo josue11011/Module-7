@@ -4,8 +4,13 @@
 # Purpose of a Program: returns the volume of a sphere of radius r.
 
 import math
-r = int(input("What is the radius of your sphere?"))
-def VolOfSphere():
+def VolOfSphere(r): #radius should be passed into this function.
      Volume = 4/3 * math.pi * r ** 3
      print("You're Volume is:", Volume)
-VolOfSphere()
+     
+def main():
+     r = int(input("What is the radius of your sphere?"))
+     VolOfSphere(r)
+ 
+main()    
+#VolOfSphere()
